@@ -1,5 +1,5 @@
 # WeatherDatabase
-Simple weather database based on JMA's forecast in Japan
+Simple weather database based on JMA's forecast in Japan with Python
 
 # Requirement
  
@@ -23,6 +23,12 @@ python3 main.py
 
 3
 
-# [Weather Database] {} is not supported!
+# [Weather Database] tenki.json has been downloaded!
 
 ```
+
+# Author
+ 
+* Enokisan
+* E-project
+* Twitter : https://twitter.com/EprojectColab1
