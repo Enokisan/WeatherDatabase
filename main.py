@@ -29,7 +29,7 @@ def main():
 
         elif query_num == 2:
             area = input("[Weather Database] Select Area.\n")
-            which_data = int(input("[Weather Database] type {0:back, 1:weathers, 2:winds, 3:waves}\n"))
+            which_data = int(input("[Weather Database] type {0:back, 1:weathers, 2:winds, 3:waves, 4:weekly pops}\n"))
             if which_data == 0:
                 print("[Weather Database] Back.\n")
                 continue
@@ -39,6 +39,8 @@ def main():
                 we.wind_sel(data, area)
             elif which_data == 3:
                 we.wave_sel(data, area)
+            elif which_data == 4:
+                we.pops_weekly(data, area)
             else:
                 print("[Weather Database] Query {} is not supported!\n".format(which_data))
                 continue

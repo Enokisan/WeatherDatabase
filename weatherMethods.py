@@ -72,6 +72,32 @@ def wave_sel(data_in, area_name):
                         s += str(times[i]) + " : " + v + "\n"
     print(s)
 
+def pops_weekly(data_in, area_name):  # with reliability
+    s = ""
+    for area in data_in:
+        if area['name'] == area_name:
+            s += "[ " + str(area_name) + " ]\n"
+            for ts in area['week']['timeSeries']:
+                times = [n for n in ts['timeDefines']]
+                if 'pops' in ts['areas']:
+                    for i,v in enumerate(ts['areas']['pops']):
+                        s += str(times[i]) + " : " + v + "\n"
+    print(s)
+"""
+def temps_weekly(data_in, area_name):  # tempsMin and tempsMax
+    s = ""
+    for area in data_in:
+        if area['name'] == area_name:
+            s += "[ " + str(area_name) + " ]\n"
+            for ts in area['week']['timeSeries']:
+                times = [n for n in ts['timeDefines']]
+                tempsMins = [tmin for tmin in ts['areas']['tempsMin']]
+                if 'tempsMax' in ts['areas']:
+                    for i,v in enumerate(ts['areas']['tempsMax']):
+                        s += str(times[i]) + " :\n" + "Min: " + str(tempsMins[i]) + ",Max: " + v + "\n"
+    print(s)
+"""
+
 """
 # デバッグ用
 # ダウンロードしたファイルを開く
